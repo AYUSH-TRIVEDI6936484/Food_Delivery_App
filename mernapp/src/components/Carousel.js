@@ -3,13 +3,34 @@ import React from "react";
 export default function Carousel() {
   return (
     <div>
-      <div id="carouselExampleFade" className="carousel slide carousel-fade">
-        <div className="carousel-inner">
+      <div
+        id="carouselExampleFade"
+        className="carousel slide carousel-fade"
+        style={{ objectFit: "contain !important" }}
+      >
+        <div className="carousel-inner" id="carousel">
+          <div className="carousel-caption" style={{ zIndex: "10" }}>
+            <form className="d-flex">
+              <input
+                className="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button
+                className="btn btn-outline-success text-white bg-success"
+                type="submit"
+              >
+                Search
+              </button>
+            </form>
+          </div>
           <div className="carousel-item active">
             <img
               src="https://source.unsplash.com/random/900x700/?burgers"
               className="d-block w-100"
               alt="..."
+              style={{ filter: "brightness(30%)" }}
             />
           </div>
           <div className="carousel-item">
@@ -17,6 +38,7 @@ export default function Carousel() {
               src="https://source.unsplash.com/random/900x700/?pizza"
               className="d-block w-100"
               alt="..."
+              style={{ filter: "brightness(30%)" }}
             />
           </div>
           <div className="carousel-item">
@@ -24,6 +46,7 @@ export default function Carousel() {
               src="https://source.unsplash.com/random/900x700/?momos"
               className="d-block w-100"
               alt="..."
+              style={{ filter: "brightness(30%)" }}
             />
           </div>
         </div>

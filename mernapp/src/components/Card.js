@@ -4,7 +4,11 @@ export default function Card() {
   return (
     <div>
       <div className="card mt-3" style={{ width: "18rem", maxHeight: "360px" }}>
-        <img src="..." className="card-img-top" alt="..." />
+        <img
+          src="https://www.cookforindia.com/wp-content/uploads/2016/08/Paneer-Tikka-_LR.jpg"
+          className="card-img-top"
+          alt="Not found"
+        />
         <div className="card-body">
           <h5 className="card-title">Card title</h5>
           <p className="card-text">This is a Card</p>
