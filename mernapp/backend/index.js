@@ -6,7 +6,8 @@ mongodb();
 app.get("/", (req, res) => {
   res.send("Hello World!");
 });
-app.use("/api/");
+app.use(express.json());
+app.use("/api", require("./routes/CreateUser"));
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
 });
