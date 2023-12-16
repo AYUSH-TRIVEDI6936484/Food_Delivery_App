@@ -28,4 +28,23 @@ router.post(
     }
   }
 );
+
+router.post(
+  "/loginuser",
+  [body("email").isEmail(), body("password").isLength({ min: 5 })],
+  async (req, res) => {
+    let email = req.body.email;
+    try {
+      let usermail = await user.findOne({ email });
+      if (!usermail) {
+        return res
+          .status(404)
+          .json({ errors: "Try logging with correct credentials" });
+      }
+    } catch (error) {
+      console.log(error);
+      res.json({ success: false });
+    }
+  }
+);
 module.exports = router;
